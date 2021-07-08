@@ -9,25 +9,25 @@ Class Instance : <<<ROOT>>> [NotCreatable] [NotBrowsable]
 	Function void Instance:ClearAllChildren()
 	Function Instance Instance:Clone()
 	Function void Instance:Destroy()
-	Function Instance Instance:FindFirstAncestor(string name) {🧬Safe}
-	Function Instance Instance:FindFirstAncestorOfClass(string className) {🧬Safe}
-	Function Instance Instance:FindFirstAncestorWhichIsA(string className) {🧬Safe}
-	Function Instance Instance:FindFirstChild(string name, bool recursive = false) {🧬Safe}
-	Function Instance Instance:FindFirstChildOfClass(string className) {🧬Safe}
-	Function Instance Instance:FindFirstChildWhichIsA(string className, bool recursive = false) {🧬Safe}
-	Function Instance Instance:FindFirstDescendant(string name) {🧬Safe}
+	Function Instance Instance:FindFirstAncestor(string name) {🧬Unknown}
+	Function Instance Instance:FindFirstAncestorOfClass(string className) {🧬Unknown}
+	Function Instance Instance:FindFirstAncestorWhichIsA(string className) {🧬Unknown}
+	Function Instance Instance:FindFirstChild(string name, bool recursive = false) {🧬Unknown}
+	Function Instance Instance:FindFirstChildOfClass(string className) {🧬Unknown}
+	Function Instance Instance:FindFirstChildWhichIsA(string className, bool recursive = false) {🧬Unknown}
+	Function Instance Instance:FindFirstDescendant(string name) {🧬Unknown}
 	Function Actor Instance:GetActor()
-	Function Variant Instance:GetAttribute(string attribute) {🧬Safe}
+	Function Variant Instance:GetAttribute(string attribute) {🧬Unknown}
 	Function RBXScriptSignal Instance:GetAttributeChangedSignal(string attribute)
-	Function Dictionary Instance:GetAttributes() {🧬Safe}
-	Function Objects Instance:GetChildren() {🧬Safe}
+	Function Dictionary Instance:GetAttributes() {🧬Unknown}
+	Function Objects Instance:GetChildren() {🧬Unknown}
 	Function string Instance:GetDebugId(int scopeLength = 4) {PluginSecurity} [NotBrowsable]
-	Function Array Instance:GetDescendants() [CustomLuaState] {🧬Safe}
-	Function string Instance:GetFullName() {🧬Safe}
+	Function Array Instance:GetDescendants() [CustomLuaState] {🧬Unknown}
+	Function string Instance:GetFullName() {🧬Unknown}
 	Function RBXScriptSignal Instance:GetPropertyChangedSignal(string property)
-	Function bool Instance:IsA(string className) [CustomLuaState] {🧬Safe}
-	Function bool Instance:IsAncestorOf(Instance descendant) {🧬Safe}
-	Function bool Instance:IsDescendantOf(Instance ancestor) {🧬Safe}
+	Function bool Instance:IsA(string className) [CustomLuaState] {🧬Unknown}
+	Function bool Instance:IsAncestorOf(Instance descendant) {🧬Unknown}
+	Function bool Instance:IsDescendantOf(Instance ancestor) {🧬Unknown}
 	Function void Instance:Remove() [Deprecated]
 	Function void Instance:SetAttribute(string attribute, Variant value)
 	Function Instance Instance:WaitForChild(string childName, double timeOut) [CustomLuaState] [CanYield]
@@ -73,8 +73,8 @@ Class Animation : Instance
 	Property Content Animation.AnimationId
 Class AnimationController : Instance [Deprecated]
 	Function Array AnimationController:GetPlayingAnimationTracks() [Deprecated]
-	Function Instance AnimationController:LoadAnimation(Instance animation) [Deprecated]
-	Event AnimationController.AnimationPlayed(Instance animationTrack) [Deprecated]
+	Function AnimationTrack AnimationController:LoadAnimation(Animation animation) [Deprecated]
+	Event AnimationController.AnimationPlayed(AnimationTrack animationTrack) [Deprecated]
 Class AnimationTrack : Instance [NotCreatable]
 	Property Animation AnimationTrack.Animation [ReadOnly]
 	Property bool AnimationTrack.IsPlaying [ReadOnly]
@@ -97,9 +97,9 @@ Class AnimationTrack : Instance [NotCreatable]
 Class Animator : Instance
 	Function void Animator:ApplyJointVelocities(Variant motors)
 	Function Array Animator:GetPlayingAnimationTracks()
-	Function Instance Animator:LoadAnimation(Instance animation)
+	Function AnimationTrack Animator:LoadAnimation(Animation animation)
 	Function void Animator:StepAnimations(float deltaTime) {PluginSecurity}
-	Event Animator.AnimationPlayed(Instance animationTrack)
+	Event Animator.AnimationPlayed(AnimationTrack animationTrack)
 Class AppUpdateService : Instance [NotCreatable] [Service] [NotReplicated]
 	Function void AppUpdateService:CheckForUpdate(Function handler = nil) {RobloxScriptSecurity}
 	Function void AppUpdateService:DisableDUAR() {RobloxScriptSecurity}
@@ -336,7 +336,7 @@ Class Beam : Instance
 	Property float Beam.Width1
 	Function void Beam:SetTextureOffset(float offset = 0)
 Class BindableEvent : Instance
-	Function void BindableEvent:Fire(Tuple arguments) {🧬Safe}
+	Function void BindableEvent:Fire(Tuple arguments) {🧬Unknown}
 	Event BindableEvent.Event(Tuple arguments)
 Class BindableFunction : Instance
 	Function Tuple BindableFunction:Invoke(Tuple arguments) [Yields]
@@ -447,14 +447,14 @@ Class Camera : Instance [NotReplicated]
 	Function float Camera:GetTiltSpeed()
 	Function void Camera:Interpolate(CFrame endPos, CFrame endFocus, float duration) [Deprecated]
 	Function void Camera:PanUnits(int units) [Deprecated]
-	Function Ray Camera:ScreenPointToRay(float x, float y, float depth = 0)
+	Function Ray Camera:ScreenPointToRay(float x, float y, float depth = 0) {🧬Unknown}
 	Function void Camera:SetCameraPanMode(Enum.CameraPanMode mode = "Classic")
 	Function void Camera:SetImageServerView(CFrame modelCoord) {RobloxScriptSecurity}
 	Function void Camera:SetRoll(float rollAngle)
 	Function bool Camera:TiltUnits(int units) [Deprecated]
-	Function Ray Camera:ViewportPointToRay(float x, float y, float depth = 0)
-	Function Tuple Camera:WorldToScreenPoint(Vector3 worldPoint)
-	Function Tuple Camera:WorldToViewportPoint(Vector3 worldPoint)
+	Function Ray Camera:ViewportPointToRay(float x, float y, float depth = 0) {🧬Unknown}
+	Function Tuple Camera:WorldToScreenPoint(Vector3 worldPoint) {🧬Unknown}
+	Function Tuple Camera:WorldToViewportPoint(Vector3 worldPoint) {🧬Unknown}
 	Function bool Camera:Zoom(float distance) {RobloxScriptSecurity}
 	Event Camera.FirstPersonTransition(bool entering) {LocalUserSecurity}
 	Event Camera.InterpolationFinished()
@@ -532,9 +532,9 @@ Class CollectionService : Instance [NotCreatable] [Service]
 	Function Objects CollectionService:GetCollection(string class) [Deprecated]
 	Function RBXScriptSignal CollectionService:GetInstanceAddedSignal(string tag)
 	Function RBXScriptSignal CollectionService:GetInstanceRemovedSignal(string tag)
-	Function Objects CollectionService:GetTagged(string tag) {🧬Safe}
-	Function Array CollectionService:GetTags(Instance instance) {🧬Safe}
-	Function bool CollectionService:HasTag(Instance instance, string tag) {🧬Safe}
+	Function Objects CollectionService:GetTagged(string tag) {🧬Unknown}
+	Function Array CollectionService:GetTags(Instance instance) {🧬Unknown}
+	Function bool CollectionService:HasTag(Instance instance, string tag) {🧬Unknown}
 	Function void CollectionService:RemoveTag(Instance instance, string tag)
 	Event CollectionService.ItemAdded(Instance instance) [Deprecated]
 	Event CollectionService.ItemRemoved(Instance instance) [Deprecated]
@@ -679,7 +679,8 @@ Class TorsionSpringConstraint : Constraint
 	Property float TorsionSpringConstraint.MaxAngle
 	Property float TorsionSpringConstraint.Restitution
 	Property float TorsionSpringConstraint.Damping
-	Property bool TorsionSpringConstraint.LimitEnabled
+	Property bool TorsionSpringConstraint.LimitEnabled [Hidden] [Deprecated]
+	Property bool TorsionSpringConstraint.LimitsEnabled
 	Property float TorsionSpringConstraint.MaxTorque
 	Property float TorsionSpringConstraint.Stiffness
 Class UniversalConstraint : Constraint
@@ -1550,15 +1551,15 @@ Class Humanoid : Instance
 	Function void Humanoid:AddAccessory(Instance accessory)
 	Function bool Humanoid:AddCustomStatus(string status) [Deprecated]
 	Function bool Humanoid:AddStatus(Enum.Status status = "Poison") [Deprecated]
-	Function void Humanoid:ApplyDescription(Instance humanoidDescription, Enum.AssetTypeVerification assetTypeVerification = "Default") [Yields]
-	Function void Humanoid:ApplyDescriptionBlocking(Instance humanoidDescription) {RobloxScriptSecurity}
-	Function void Humanoid:ApplyDescriptionClientServer(Instance humanoidDescription) {RobloxScriptSecurity} [Yields]
+	Function void Humanoid:ApplyDescription(HumanoidDescription humanoidDescription, Enum.AssetTypeVerification assetTypeVerification = "Default") [Yields]
+	Function void Humanoid:ApplyDescriptionBlocking(HumanoidDescription humanoidDescription) {RobloxScriptSecurity}
+	Function void Humanoid:ApplyDescriptionClientServer(HumanoidDescription humanoidDescription) {RobloxScriptSecurity} [Yields]
 	Function void Humanoid:BuildRigFromAttachments()
 	Function void Humanoid:CacheDefaults() {RobloxScriptSecurity}
 	Function void Humanoid:ChangeState(Enum.HumanoidStateType state = "None")
 	Function void Humanoid:EquipTool(Instance tool)
 	Function Array Humanoid:GetAccessories()
-	Function Instance Humanoid:GetAppliedDescription()
+	Function HumanoidDescription Humanoid:GetAppliedDescription()
 	Function Enum.BodyPartR15 Humanoid:GetBodyPartR15(Instance part)
 	Function Enum.Limb Humanoid:GetLimb(Instance part)
 	Function Array Humanoid:GetPlayingAnimationTracks() [Deprecated]
@@ -1567,7 +1568,7 @@ Class Humanoid : Instance
 	Function Array Humanoid:GetStatuses() [Deprecated]
 	Function bool Humanoid:HasCustomStatus(string status) [Deprecated]
 	Function bool Humanoid:HasStatus(Enum.Status status = "Poison") [Deprecated]
-	Function Instance Humanoid:LoadAnimation(Instance animation) [Deprecated]
+	Function AnimationTrack Humanoid:LoadAnimation(Animation animation) [Deprecated]
 	Function void Humanoid:Move(Vector3 moveDirection, bool relativeToCamera = false)
 	Function void Humanoid:MoveTo(Vector3 location, Instance part = nil)
 	Function bool Humanoid:PlayEmote(string emoteName) [Yields]
@@ -1575,12 +1576,12 @@ Class Humanoid : Instance
 	Function void Humanoid:RemoveAccessories()
 	Function bool Humanoid:RemoveCustomStatus(string status) [Deprecated]
 	Function bool Humanoid:RemoveStatus(Enum.Status status = "Poison") [Deprecated]
-	Function bool Humanoid:ReplaceBodyPartR15(Enum.BodyPartR15 bodyPart, Instance part)
+	Function bool Humanoid:ReplaceBodyPartR15(Enum.BodyPartR15 bodyPart, BasePart part)
 	Function void Humanoid:SetClickToWalkEnabled(bool enabled) {RobloxScriptSecurity}
 	Function void Humanoid:SetStateEnabled(Enum.HumanoidStateType state, bool enabled)
 	Function void Humanoid:TakeDamage(float amount)
 	Function void Humanoid:UnequipTools()
-	Event Humanoid.AnimationPlayed(Instance animationTrack) [Deprecated]
+	Event Humanoid.AnimationPlayed(AnimationTrack animationTrack) [Deprecated]
 	Event Humanoid.Climbing(float speed)
 	Event Humanoid.ClusterCompositionFinished() {RobloxScriptSecurity}
 	Event Humanoid.CustomStatusAdded(string status) [Deprecated]
@@ -1595,14 +1596,14 @@ Class Humanoid : Instance
 	Event Humanoid.PlatformStanding(bool active)
 	Event Humanoid.Ragdoll(bool active)
 	Event Humanoid.Running(float speed)
-	Event Humanoid.Seated(bool active, Instance currentSeatPart)
+	Event Humanoid.Seated(bool active, BasePart currentSeatPart)
 	Event Humanoid.StateChanged(Enum.HumanoidStateType old, Enum.HumanoidStateType new)
 	Event Humanoid.StateEnabledChanged(Enum.HumanoidStateType state, bool isEnabled)
 	Event Humanoid.StatusAdded(Enum.Status status) [Deprecated]
 	Event Humanoid.StatusRemoved(Enum.Status status) [Deprecated]
 	Event Humanoid.Strafing(bool active)
 	Event Humanoid.Swimming(float speed)
-	Event Humanoid.Touched(Instance touchingPart, Instance humanoidPart)
+	Event Humanoid.Touched(BasePart touchingPart, BasePart humanoidPart)
 Class HumanoidDescription : Instance
 	Property string HumanoidDescription.AccessoryBlob [NotScriptable]
 	Property string HumanoidDescription.BackAccessory
@@ -2131,16 +2132,16 @@ Class BasePart : PVInstance [NotCreatable] [NotBrowsable]
 	Function void BasePart:BreakJoints()
 	Function bool BasePart:CanCollideWith(Instance part)
 	Function Tuple BasePart:CanSetNetworkOwnership()
-	Function Objects BasePart:GetConnectedParts(bool recursive = false) {🧬Safe}
-	Function Objects BasePart:GetJoints() {🧬Safe}
-	Function float BasePart:GetMass() {🧬Safe}
+	Function Objects BasePart:GetConnectedParts(bool recursive = false) {🧬Unknown}
+	Function Objects BasePart:GetJoints() {🧬Unknown}
+	Function float BasePart:GetMass() {🧬Unknown}
 	Function Instance BasePart:GetNetworkOwner()
 	Function bool BasePart:GetNetworkOwnershipAuto()
 	Function CFrame BasePart:GetRenderCFrame() [Deprecated]
-	Function Instance BasePart:GetRootPart() {🧬Safe}
+	Function Instance BasePart:GetRootPart() {🧬Unknown}
 	Function Objects BasePart:GetTouchingParts()
 	Function Vector3 BasePart:GetVelocityAtPosition(Vector3 position)
-	Function bool BasePart:IsGrounded() {🧬Safe}
+	Function bool BasePart:IsGrounded() {🧬Unknown}
 	Function void BasePart:MakeJoints()
 	Function bool BasePart:Resize(Enum.NormalId normalId, int deltaAmount)
 	Function void BasePart:SetNetworkOwner(Player playerInstance = nil)
@@ -2210,7 +2211,7 @@ Class Terrain : BasePart [NotCreatable]
 	Function Color3 Terrain:GetMaterialColor(Enum.Material material)
 	Function Tuple Terrain:GetWaterCell(int x, int y, int z) [Deprecated]
 	Function void Terrain:PasteRegion(Instance region, Vector3int16 corner, bool pasteEmptyCells)
-	Function Tuple Terrain:ReadVoxels(Region3 region, float resolution) [CustomLuaState] {🧬Safe}
+	Function Tuple Terrain:ReadVoxels(Region3 region, float resolution) [CustomLuaState] {🧬Unknown}
 	Function void Terrain:ReplaceMaterial(Region3 region, float resolution, Enum.Material sourceMaterial, Enum.Material targetMaterial)
 	Function void Terrain:SetCell(int x, int y, int z, Enum.CellMaterial material, Enum.CellBlock block, Enum.CellOrientation orientation) [Deprecated]
 	Function void Terrain:SetCells(Region3int16 region, Enum.CellMaterial material, Enum.CellBlock block, Enum.CellOrientation orientation) [Deprecated]
@@ -2282,7 +2283,7 @@ Class WorldRoot : Model [NotCreatable]
 	Function Tuple WorldRoot:FindPartOnRay(Ray ray, Instance ignoreDescendantsInstance = nil, bool terrainCellsAreCubes = false, bool ignoreWater = false) [Deprecated]
 	Function Tuple WorldRoot:FindPartOnRayWithIgnoreList(Ray ray, Objects ignoreDescendantsTable, bool terrainCellsAreCubes = false, bool ignoreWater = false) [Deprecated]
 	Function Tuple WorldRoot:FindPartOnRayWithWhitelist(Ray ray, Objects whitelistDescendantsTable, bool ignoreWater = false) [Deprecated]
-	Function Objects WorldRoot:FindPartsInRegion3(Region3 region, Instance ignoreDescendantsInstance = nil, int maxParts = 20) {🧬Safe}
+	Function Objects WorldRoot:FindPartsInRegion3(Region3 region, Instance ignoreDescendantsInstance = nil, int maxParts = 20) {🧬Unknown}
 	Function Objects WorldRoot:FindPartsInRegion3WithIgnoreList(Region3 region, Objects ignoreDescendantsTable, int maxParts = 20)
 	Function Objects WorldRoot:FindPartsInRegion3WithWhiteList(Region3 region, Objects whitelistDescendantsTable, int maxParts = 20)
 	Function Objects WorldRoot:GetPartBoundsInBox(CFrame cframe, Vector3 size, OverlapParams overlapParams = OverlapParams.new())
@@ -2291,7 +2292,7 @@ Class WorldRoot : Model [NotCreatable]
 	Function void WorldRoot:IKMoveTo(BasePart part, CFrame target, float translateStiffness = 0.5, float rotateStiffness = 0.5, Enum.IKCollisionsMode collisionsMode = "OtherMechanismsAnchored") {PluginSecurity}
 	Function bool WorldRoot:IsRegion3Empty(Region3 region, Instance ignoreDescendentsInstance = nil)
 	Function bool WorldRoot:IsRegion3EmptyWithIgnoreList(Region3 region, Objects ignoreDescendentsTable)
-	Function RaycastResult WorldRoot:Raycast(Vector3 origin, Vector3 direction, RaycastParams raycastParams = RaycastParams.new()) {🧬Safe}
+	Function RaycastResult WorldRoot:Raycast(Vector3 origin, Vector3 direction, RaycastParams raycastParams = RaycastParams.new()) {🧬Unknown}
 	Function void WorldRoot:SetInsertPoint(Vector3 point, bool ignoreGrid = false) {RobloxScriptSecurity}
 Class Workspace : WorldRoot [NotCreatable] [Service]
 	Property bool Workspace.AllowThirdPartySales [NotReplicated]
@@ -2815,7 +2816,6 @@ Class ReflectionMetadataItem : Instance [NotCreatable]
 	Property double ReflectionMetadataItem.UIMaximum
 	Property double ReflectionMetadataItem.UIMinimum
 	Property double ReflectionMetadataItem.UINumTicks
-	Property string ReflectionMetadataItem.summary
 Class ReflectionMetadataClass : ReflectionMetadataItem
 	Property int ReflectionMetadataClass.ExplorerImageIndex
 	Property int ReflectionMetadataClass.ExplorerOrder
@@ -2950,8 +2950,8 @@ Class ServerScriptService : Instance [NotCreatable] [Service] [NotReplicated]
 	Property bool ServerScriptService.LoadStringEnabled [NotReplicated] [NotScriptable]
 Class ServerStorage : Instance [NotCreatable] [Service] [NotReplicated]
 Class ServiceProvider : Instance [NotCreatable] [NotBrowsable]
-	Function Instance ServiceProvider:FindService(string className)
-	Function Instance ServiceProvider:GetService(string className)
+	Function Instance ServiceProvider:FindService(string className) {🧬Unknown}
+	Function Instance ServiceProvider:GetService(string className) {🧬Unknown}
 	Function Instance ServiceProvider:service(string className) [Deprecated]
 	Event ServiceProvider.Close()
 	Event ServiceProvider.CloseLate() {LocalUserSecurity}
@@ -3513,6 +3513,7 @@ Class TestService : Instance [Service]
 	Function void TestService:Message(string text, Instance source = nil, int line = 0)
 	Function void TestService:Require(bool condition, string description, Instance source = nil, int line = 0)
 	Function void TestService:Run() {PluginSecurity} [Yields]
+	Function Dictionary TestService:ScopeTime()
 	Function void TestService:Warn(bool condition, string description, Instance source = nil, int line = 0)
 	Function bool TestService:isFeatureEnabled(string name)
 	Event TestService.ServerCollectConditionalResult(bool condition, string text, Instance script, int line)
@@ -3586,6 +3587,7 @@ Class UGCValidationService : Instance [NotCreatable] [Service] [NotReplicated]
 	Function Objects UGCValidationService:FetchAssetWithFormat(Content url, string assetFormat) {RobloxScriptSecurity} [Yields]
 	Function int UGCValidationService:GetMeshTriCount(string meshId) {RobloxScriptSecurity} [Yields]
 	Function int UGCValidationService:GetMeshTriCountSync(string meshId) {RobloxScriptSecurity}
+	Function Array UGCValidationService:GetMeshVertColors(string meshId) {RobloxScriptSecurity} [Yields]
 	Function Array UGCValidationService:GetMeshVerts(string meshId) {RobloxScriptSecurity} [Yields]
 	Function Array UGCValidationService:GetMeshVertsSync(string meshId) {RobloxScriptSecurity}
 	Function Vector2 UGCValidationService:GetTextureSize(string textureId) {RobloxScriptSecurity} [Yields]

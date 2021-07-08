@@ -139,6 +139,8 @@ Studio.App.BetaFeatures.LuauNativeVector3Description,,Enable Luau VM built-in su
 Studio.App.BetaFeatures.LuauNativeVector3Title,,Native Vector3 Type,Native Vector3 Type
 Studio.App.BetaFeatures.LuauNonStrictByDefaultDescription,,"Script analysis uses non-strict mode for all scripts by default. Use --!strict, --!nonstrict or --!nocheck to override mode on a per script basis.","Script analysis uses non-strict mode for all scripts by default. Use --!strict, --!nonstrict or --!nocheck to override mode on a per script basis."
 Studio.App.BetaFeatures.LuauNonStrictByDefaultTitle,,Scripts Are Non-Strict By Default,Scripts Are Non-Strict By Default
+Studio.App.BetaFeatures.MinPartSizeDescription,,"Reduces the minimum limit on part sizes from 0.05 to 0.001. Parts can be visually smaller, but will still limit to 0.05 for collision geometry for now.","Reduces the minimum limit on part sizes from 0.05 to 0.001. Parts can be visually smaller, but will still limit to 0.05 for collision geometry for now."
+Studio.App.BetaFeatures.MinPartSizeTitle,,Lower minimum part size,Lower minimum part size
 Studio.App.BetaFeatures.NewFeaturesForChannelUserWarning1,,"New beta features have been automatically enabled above as you are enrolled in Beta Channel. You must restart Studio for them to be activated. <a href=""%1"">Restart Now</a>","New beta features have been automatically enabled above as you are enrolled in Beta Channel. You must restart Studio for them to be activated. <a href=""%1"">Restart Now</a>"
 Studio.App.BetaFeatures.NewGamesInCloudDescription,,Allows saving games to the cloud without publishing.,Allows saving games to the cloud without publishing.
 Studio.App.BetaFeatures.NewGamesInCloudTitle,,New Games in the Cloud,New Games in the Cloud
@@ -191,6 +193,7 @@ Studio.App.BetaFeatures.WhatsNewWindowDescription,,Open up a scrolling window th
 Studio.App.BetaFeatures.WhatsNewWindowTitle,,New Updates Window,New Updates Window
 Studio.App.BreakpointConditionEditDialog.BreakpointCondition,,Breakpoint Condition,Breakpoint Condition
 Studio.App.BreakpointConditionEditDialog.Condition,,Condition:,Condition:
+Studio.App.Breakpoints.Breakpoints,,Breakpoints,Breakpoints
 Studio.App.Breakpoints.DeleteAllBreakpoints,Debugger widgets,Delete All Breakpoints,Delete All Breakpoints
 Studio.App.Breakpoints.DeleteSelectedBreakpoint,Debugger widgets,Delete Selected Breakpoint,Delete Selected Breakpoint
 Studio.App.Breakpoints.GoToSourceCode,Debugger widgets,Go To Source Code,Go To Source Code
@@ -249,6 +252,7 @@ Studio.App.BulkImporter.RetryingUploadIn1SecondS,,Retrying upload in %1 second(s
 Studio.App.BulkImporter.SplitFrom1,,Split from %1,Split from %1
 Studio.App.BulkImporterImpl.AssetHasBeenRenamedTo1,,Asset has been renamed to '%1',Asset has been renamed to '%1'
 Studio.App.BulkImporterImpl.AssetNameModerated,,Asset name on website has been moderated,Asset name on website has been moderated
+Studio.App.BulkImporterImpl.RetryLimitHitTryAgainIfNotExceedingDailyLimit,,Upload retry limit for this asset has been reached. If daily limit hasn't been exceeded try again later.,Upload retry limit for this asset has been reached. If daily limit hasn't been exceeded try again later.
 Studio.App.BulkImporterImpl.RetryLimtHitTryAgainLater,,Retry limit hit. Try again later,Retry limit hit. Try again later
 Studio.App.BulkImporterImpl.RetryingUpload,,Retrying upload,Retrying upload
 Studio.App.CalibrateDeviceScalingDialog.AdjustTheSlider,,Adjust the slider so that the image below is about the size of a student ID or library card (8.56 cm or 3.37 inches wide).,Adjust the slider so that the image below is about the size of a student ID or library card (8.56 cm or 3.37 inches wide).
@@ -341,6 +345,11 @@ Studio.App.ContextMenuDropdown.MakePublic,,Make public,Make public
 Studio.App.ContextMenuDropdown.OpenPlacePage,,Open place page,Open place page
 Studio.App.ContextMenuDropdown.RemoveFromList,,Remove from list,Remove from list
 Studio.App.ContextMenuDropdown.Restore,,Restore,Restore
+Studio.App.CoreScriptBuilder.ParseFailInvalidArg,Internal feature. Text in output window.,Parsing port string failed with std::invalid_argument,Parsing port string failed with std::invalid_argument
+Studio.App.CoreScriptBuilder.ParseFailOutOfRange,Internal feature. Text in output window.,Parsing port string failed with std::out_of_range,Parsing port string failed with std::out_of_range
+Studio.App.CoreScriptBuilder.WaitForReadyReadFailed1,Internal feature. Text in output window.,QProcess::waitForReadyRead failed(%1),QProcess::waitForReadyRead failed(%1)
+Studio.App.CoreScriptBuilder.WaitForStartedFailed1,Internal feature. Text in output window.,QProcess::waitForStarted failed(%1),QProcess::waitForStarted failed(%1)
+Studio.App.CoreScriptBuilder.WaitForStartedFailedHelp,Internal feature. Text in output window.,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?
 Studio.App.CorruptedInstallationDialog.DefaultMessage,,Some Studio files are missing or corrupted. Please reinstall Studio by following the instructions at <a href='https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true'>https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true</a>,Some Studio files are missing or corrupted. Please reinstall Studio by following the instructions at <a href='https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true'>https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true</a>
 Studio.App.CreateNewGameWidget.CreateNewGame,,Create New Game,Create New Game
 Studio.App.CreateNewGameWidget.GroupHasNoArchivedGames,,This group doesn't have any archived games,This group doesn't have any archived games
@@ -583,7 +592,6 @@ Studio.App.GameExplorer.InsertAsLocalScript,,Insert as LocalScript,Insert as Loc
 Studio.App.GameExplorer.InsertAsModuleScript,,Insert as ModuleScript,Insert as ModuleScript
 Studio.App.GameExplorer.InsertAsScript,,InsertAsScript,InsertAsScript
 Studio.App.GameExplorer.InsertWithLocation,,Insert with location,Insert with location
-Studio.App.GameExplorer.MassUpdatePackage,,Update All,Update All
 Studio.App.GameExplorer.ProductSettings,,Product Settings...,Product Settings...
 Studio.App.GameExplorer.PublishLinkedSource,,Publish this LinkedSource,Publish this LinkedSource
 Studio.App.GameExplorer.RefreshScript,,Refresh Script,Refresh Script
@@ -811,6 +819,7 @@ Error Message: '%2'"
 Studio.App.LocalPlacePublishRequestMediator.FetchActivePlayersInTCFailureTitle,Title of the pop up dialog,Overwrite Place,Overwrite Place
 Studio.App.LocalPlacePublishRequestMediator.PublishInProgress,,A Place Publish / Save is already in progress,A Place Publish / Save is already in progress
 Studio.App.LocalPlacePublishRequestMediator.Saving,,saving,saving
+Studio.App.LocalPlacePublishRequestMediator.SentMessageToServerToPublish,,Sent message to server to publish.,Sent message to server to publish.
 Studio.App.LocalPlacePublishRequestMediator.UnexpectedDataFormat,Display this message when fetched result has unexpected format,Unexpected data format.,Unexpected data format.
 Studio.App.LocalSaveHelper.DataModelError,,Failed to save the DataModel.,Failed to save the DataModel.
 Studio.App.LocalSaveHelper.FailedToLock1,,"Failed to obtain a file lock on '%1'.
@@ -875,6 +884,7 @@ Studio.App.Login.StudioVersion1,,Roblox Studio Version %1,Roblox Studio Version 
 Studio.App.Login.TooManyLogins,,Too many logins were attempted from this network. You must log in through a web browser.,Too many logins were attempted from this network. You must log in through a web browser.
 Studio.App.Login.UnableToLogin,,Unable to log in,Unable to log in
 Studio.App.Login.UnableToLogout,,Unable to log out. Please save modified places in other Studio instances and then proceed with log out.,Unable to log out. Please save modified places in other Studio instances and then proceed with log out.
+Studio.App.Login.UserModerated,,"User is moderated, please check website for more details.","User is moderated, please check website for more details."
 Studio.App.LoginManager.CaptchaClosed,,Login requires Captcha. Please try again.,Login requires Captcha. Please try again.
 Studio.App.LoginManager.CaptchaError,,Error displaying captcha,Error displaying captcha
 Studio.App.LoginManager.CaptchaInvalid,,Captcha response not recognized. Please try again.,Captcha response not recognized. Please try again.
@@ -1128,8 +1138,6 @@ Studio.App.PackageMassUpdate.Version,Version of a package,Version,Version
 Studio.App.PackageMassUpdate.VersionContent1,latest mean the last version of the package,%1 (latest),%1 (latest)
 Studio.App.PackageMassUpdate.Waiting,One of the update status,Waiting,Waiting
 Studio.App.PackageMassUpdate.WarningMessage,,Note: We recommend closing other Studio instances before mass updating.,Note: We recommend closing other Studio instances before mass updating.
-Studio.App.PackageResourceController.PackageDetails,,Package Details,Package Details
-Studio.App.PackageResourceController.PackageInsertError1,,Game Explorer Package insert error: %1,Game Explorer Package insert error: %1
 Studio.App.PackageUtilities.GoToRevisionError1,,Package go to revision error: %1,Package go to revision error: %1
 Studio.App.PackageUtilities.ModifiedPackagesInDMError,,Error: Cannot publish place to Roblox while there are packages with unpublished changes.,Error: Cannot publish place to Roblox while there are packages with unpublished changes.
 Studio.App.PackageUtilities.PendingPackagesInDMError,,Unable to publish this place as there may be modified packages. Please try again later.,Unable to publish this place as there may be modified packages. Please try again later.
@@ -1657,7 +1665,6 @@ Studio.App.RBXMainWindow.DisablesRotateSnapping,,Disables the rotate grid snappi
 Studio.App.RBXMainWindow.DisablesTheDragGridSnapping,,Disable drag grid snapping,Disable drag grid snapping
 Studio.App.RBXMainWindow.DownloadACopyElps,,Download a Copy...,Download a Copy...
 Studio.App.RBXMainWindow.DownloadActiveDocument,,Download a copy of the active document,Download a copy of the active document
-Studio.App.RBXMainWindow.Drafts,,Drafts,Drafts
 Studio.App.RBXMainWindow.Drag,,Drag,Drag
 Studio.App.RBXMainWindow.DraggerModeGeometric,,Geometric,Geometric
 Studio.App.RBXMainWindow.DraggerModeLabel,,Mode:,Mode:
@@ -1853,6 +1860,7 @@ Studio.App.RBXMainWindow.RotateParts,,Rotate Parts,Rotate Parts
 Studio.App.RBXMainWindow.RotateToggle,,Rotate - Toggle,Rotate - Toggle
 Studio.App.RBXMainWindow.RotateTool,,Rotate Tool,Rotate Tool
 Studio.App.RBXMainWindow.Run,,Run,Run
+Studio.App.RBXMainWindow.Sandbox,,Drafts,Drafts
 Studio.App.RBXMainWindow.SaveActiveDocumentToRoblox,,Save active document to Roblox,Save active document to Roblox
 Studio.App.RBXMainWindow.SaveActiveDocumentToRobloxAs,,Save active document to Roblox as,Save active document to Roblox as
 Studio.App.RBXMainWindow.SaveAndReloadAllPlugins,,Save and Reload All Plugins in Debugger,Save and Reload All Plugins in Debugger
@@ -1892,10 +1900,10 @@ Studio.App.RBXMainWindow.Separate,,Separate,Separate
 Studio.App.RBXMainWindow.SeparateFusedSelection,,Separate parts from a fused selection,Separate parts from a fused selection
 Studio.App.RBXMainWindow.ServiceElps,,Service...,Service...
 Studio.App.RBXMainWindow.SetAsInstanceDefault,,Set as Instance Default,Set as Instance Default
+Studio.App.RBXMainWindow.SetAsInstanceDefaultStatusTip,,Set the selection as the default for future created instances,Set the selection as the default for future created instances
 Studio.App.RBXMainWindow.SetGridSizeTo16Studs,,Set Grid Size to 16 Studs,Set Grid Size to 16 Studs
 Studio.App.RBXMainWindow.SetGridSizeTo2Studs,,Set Grid Size to 2 Studs,Set Grid Size to 2 Studs
 Studio.App.RBXMainWindow.SetGridSizeTo4Studs,,Set Grid Size to 4 Studs,Set Grid Size to 4 Studs
-Studio.App.RBXMainWindow.SetSelectionAsInstanceDefault,,Set the selection as the default for future created instances,Set the selection as the default for future created instances
 Studio.App.RBXMainWindow.SettingsElps,,Settings...,Settings...
 Studio.App.RBXMainWindow.ShowHelpForSelectedObject,,Show help for selected object,Show help for selected object
 Studio.App.RBXMainWindow.ShowListOfShortcutCommands,,Show list of shortcut commands,Show list of shortcut commands
@@ -1966,7 +1974,6 @@ Studio.App.RBXMainWindow.UnlockAll,,Unlock All,Unlock All
 Studio.App.RBXMainWindow.UploadLogFiles,,Upload Log Files,Upload Log Files
 Studio.App.RBXMainWindow.VideoRecord,,Video Record,Video Record
 Studio.App.RBXMainWindow.ViewCommandBar,,View Command Bar,View Command Bar
-Studio.App.RBXMainWindow.ViewDrafts,,View Drafts,View Drafts
 Studio.App.RBXMainWindow.ViewFindReplaceWindow,,View Find/Replace Window,View Find/Replace Window
 Studio.App.RBXMainWindow.ViewFindResults,,View Find results,View Find results
 Studio.App.RBXMainWindow.ViewGameExplorerElps,,View Game Explorer...,View Game Explorer...
@@ -1975,6 +1982,7 @@ Studio.App.RBXMainWindow.ViewOutputWindowElps,,View Output Window...,View Output
 Studio.App.RBXMainWindow.ViewPerformanceDiagnosticsElps,,View Performance Diagnostics...,View Performance Diagnostics...
 Studio.App.RBXMainWindow.ViewPropertiesElps,,View Properties...,View Properties...
 Studio.App.RBXMainWindow.ViewRecoveredScriptsElps,,View Recovered Scripts...,View Recovered Scripts...
+Studio.App.RBXMainWindow.ViewSandbox,,View Drafts,View Drafts
 Studio.App.RBXMainWindow.ViewScriptAnalysisElps,,View Script Analysis...,View Script Analysis...
 Studio.App.RBXMainWindow.ViewScriptChangesElps,,View Script Changes...,View Script Changes...
 Studio.App.RBXMainWindow.ViewScriptPerformanceElps,,View Script Performance...,View Script Performance...
@@ -2004,6 +2012,8 @@ Studio.App.RemoteDebugger.AssetProxyRunning2,,Asset Proxy running at %1:%2,Asset
 Studio.App.RemoteDebugger.AssetProxyStopped,,Asset Proxy stopped,Asset Proxy stopped
 Studio.App.RemoteDebugger.ColumnAssetId,,Asset Id,Asset Id
 Studio.App.RemoteDebugger.ColumnPath,,Path,Path
+Studio.App.RemoteDebugger.ErrorAssetMissing,,Asset not found or not accessible to ContentProvider,Asset not found or not accessible to ContentProvider
+Studio.App.RemoteDebugger.ErrorDuplicateId,,Duplicate Asset ID,Duplicate Asset ID
 Studio.App.RemoteDebugger.InvalidIp,,Invalid IP Address. ,Invalid IP Address. 
 Studio.App.RemoteDebugger.InvalidPort,,Invalid Port. ,Invalid Port. 
 Studio.App.RemoteDebugger.IpAddress,,IP Address:,IP Address:
@@ -2435,8 +2445,8 @@ Studio.App.RobloxRibbonMainWindow.Navigate,,Navigate,Navigate
 Studio.App.RobloxRibbonMainWindow.NegatePartsForMakingHoles,,Negate parts for making holes,Negate parts for making holes
 Studio.App.RobloxRibbonMainWindow.Network,,Network,Network
 Studio.App.RobloxRibbonMainWindow.NewUpdates,,What's New,What's New
-Studio.App.RobloxRibbonMainWindow.NoCollision,,No Collision,No Collision
-Studio.App.RobloxRibbonMainWindow.NoCollisionTooltip,,Create a no collision constraint,Create a no collision constraint
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraint,,No Collision,No Collision
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraintTooltip,,Create a no collision constraint,Create a no collision constraint
 Studio.App.RobloxRibbonMainWindow.None,,None,None
 Studio.App.RobloxRibbonMainWindow.OpenSaveManageDoc,,"Click here to open, save or publish, and to see everything else you can do with the document","Click here to open, save or publish, and to see everything else you can do with the document"
 Studio.App.RobloxRibbonMainWindow.OpenTheLocalPluginsFolder,,Open the local plugins folder,Open the local plugins folder
@@ -3034,6 +3044,7 @@ Studio.App.VersionHistoryDialog.VersionHistoryHashMismatch,,Current Source does 
 Studio.App.VersionHistoryDialog.ViewButtonText,,View,View
 Studio.App.VideoControl.RecordingStarted,,Video recording started,Video recording started
 Studio.App.VideoControl.RecordingStopped,,Video recording stopped,Video recording stopped
+Studio.App.Watch.Watch,,Watch,Watch
 Studio.App.WatchWidget.CopyEntry,Copy Entry in the WatchWidget copies via context menu only the variable info from the column selected and row currently highlighted,Copy Entry,Copy Entry
 Studio.App.WatchWidget.CopyRow,Copy Row in the WatchWidget copies all the variable info via context menu,Copy Row,Copy Row
 Studio.App.WatchWidget.Expression,,Expression,Expression
