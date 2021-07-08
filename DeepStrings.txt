@@ -9160,13 +9160,6 @@ DiffView.png
 DigestAlgorithm_find_ctx
 DigestAlgorithm_init_bio
 DigestedData_do_final
-DigiCertAssuredIDRootCA.crl0
-DigiCertAssuredIDRootCA.crl0P
-DigiCertAssuredIDRootCA.crt0
-DigiCertEVCodeSigningCA
-DigiCertHighAssuranceEVRootCA.crl0
-DigiCertHighAssuranceEVRootCA.crt0
-DigiCertSHA2AssuredIDTimestampingCA.crt0
 DigitalSignature
 DilateTemporalFS
 DilleniaUPC
@@ -10246,6 +10239,8 @@ Enterprises
 EntireSession
 EntityProperties
 EntriesFromJson
+Entrust.net
+Entrust.net1
 EntryInformation
 Entrypoint
 Enum.AvatarAssetType
@@ -10367,7 +10362,6 @@ EulerAnglesYXZ
 EvaluatedKey
 EvaluateForHovers
 EvaluateGlobalTransform
-EVCodeSigningSHA2
 Event.button
 Event.clientX
 Event.clientY
@@ -14854,6 +14848,7 @@ LightUserdata
 LimitAngle0
 LimitAngle1
 LimitDPIScale2
+Limited1301
 LimitedByCongestionControl
 LimitedByOutgoingBandwidthLimit
 LimitEnabled
@@ -16754,6 +16749,7 @@ NETSCAPE_SPKI
 NETSCAPE_SPKI_b64_decode
 NETSCAPE_SPKI_b64_encode
 NETSCAPE2.0
+Network100.
 NetworkAddJoinsInJob
 NetworkAssignGlobalIdPrepOnly
 NetworkAudit
@@ -17476,7 +17472,6 @@ OrderFunction
 OrderFunctionMenu
 OrFirstTier
 Organization
-Organization1
 OrganizationDomain
 OrganizationName
 Organizations
@@ -27267,6 +27262,7 @@ SXNET_add_id_INTEGER
 SXNET_add_id_ulong
 SXNET_get_id_asc
 SXNET_get_id_ulong
+SymantecPKI
 SymbolicLinkAlreadyExist
 SymbolValue
 SymFunctionTableAccess64
