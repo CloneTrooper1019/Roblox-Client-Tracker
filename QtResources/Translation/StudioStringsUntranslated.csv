@@ -345,6 +345,11 @@ Studio.App.ContextMenuDropdown.MakePublic,,Make public,Make public
 Studio.App.ContextMenuDropdown.OpenPlacePage,,Open place page,Open place page
 Studio.App.ContextMenuDropdown.RemoveFromList,,Remove from list,Remove from list
 Studio.App.ContextMenuDropdown.Restore,,Restore,Restore
+Studio.App.CoreScriptBuilder.ParseFailInvalidArg,Internal feature. Text in output window.,Parsing port string failed with std::invalid_argument,Parsing port string failed with std::invalid_argument
+Studio.App.CoreScriptBuilder.ParseFailOutOfRange,Internal feature. Text in output window.,Parsing port string failed with std::out_of_range,Parsing port string failed with std::out_of_range
+Studio.App.CoreScriptBuilder.WaitForReadyReadFailed1,Internal feature. Text in output window.,QProcess::waitForReadyRead failed(%1),QProcess::waitForReadyRead failed(%1)
+Studio.App.CoreScriptBuilder.WaitForStartedFailed1,Internal feature. Text in output window.,QProcess::waitForStarted failed(%1),QProcess::waitForStarted failed(%1)
+Studio.App.CoreScriptBuilder.WaitForStartedFailedHelp,Internal feature. Text in output window.,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?,This error usually means that robloxdev-cli could not be found. Have you made sure that robloxdev-cli is in your PATH or you have set FFlagDebugStudioCoreScriptBuilderExecutable to point to the right location?
 Studio.App.CorruptedInstallationDialog.DefaultMessage,,Some Studio files are missing or corrupted. Please reinstall Studio by following the instructions at <a href='https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true'>https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true</a>,Some Studio files are missing or corrupted. Please reinstall Studio by following the instructions at <a href='https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true'>https://en.help.roblox.com/hc/en-us/articles/203312910?fromStudio=true</a>
 Studio.App.CreateNewGameWidget.CreateNewGame,,Create New Game,Create New Game
 Studio.App.CreateNewGameWidget.GroupHasNoArchivedGames,,This group doesn't have any archived games,This group doesn't have any archived games
@@ -1660,7 +1665,6 @@ Studio.App.RBXMainWindow.DisablesRotateSnapping,,Disables the rotate grid snappi
 Studio.App.RBXMainWindow.DisablesTheDragGridSnapping,,Disable drag grid snapping,Disable drag grid snapping
 Studio.App.RBXMainWindow.DownloadACopyElps,,Download a Copy...,Download a Copy...
 Studio.App.RBXMainWindow.DownloadActiveDocument,,Download a copy of the active document,Download a copy of the active document
-Studio.App.RBXMainWindow.Drafts,,Drafts,Drafts
 Studio.App.RBXMainWindow.Drag,,Drag,Drag
 Studio.App.RBXMainWindow.DraggerModeGeometric,,Geometric,Geometric
 Studio.App.RBXMainWindow.DraggerModeLabel,,Mode:,Mode:
@@ -1856,6 +1860,7 @@ Studio.App.RBXMainWindow.RotateParts,,Rotate Parts,Rotate Parts
 Studio.App.RBXMainWindow.RotateToggle,,Rotate - Toggle,Rotate - Toggle
 Studio.App.RBXMainWindow.RotateTool,,Rotate Tool,Rotate Tool
 Studio.App.RBXMainWindow.Run,,Run,Run
+Studio.App.RBXMainWindow.Sandbox,,Drafts,Drafts
 Studio.App.RBXMainWindow.SaveActiveDocumentToRoblox,,Save active document to Roblox,Save active document to Roblox
 Studio.App.RBXMainWindow.SaveActiveDocumentToRobloxAs,,Save active document to Roblox as,Save active document to Roblox as
 Studio.App.RBXMainWindow.SaveAndReloadAllPlugins,,Save and Reload All Plugins in Debugger,Save and Reload All Plugins in Debugger
@@ -1895,10 +1900,10 @@ Studio.App.RBXMainWindow.Separate,,Separate,Separate
 Studio.App.RBXMainWindow.SeparateFusedSelection,,Separate parts from a fused selection,Separate parts from a fused selection
 Studio.App.RBXMainWindow.ServiceElps,,Service...,Service...
 Studio.App.RBXMainWindow.SetAsInstanceDefault,,Set as Instance Default,Set as Instance Default
+Studio.App.RBXMainWindow.SetAsInstanceDefaultStatusTip,,Set the selection as the default for future created instances,Set the selection as the default for future created instances
 Studio.App.RBXMainWindow.SetGridSizeTo16Studs,,Set Grid Size to 16 Studs,Set Grid Size to 16 Studs
 Studio.App.RBXMainWindow.SetGridSizeTo2Studs,,Set Grid Size to 2 Studs,Set Grid Size to 2 Studs
 Studio.App.RBXMainWindow.SetGridSizeTo4Studs,,Set Grid Size to 4 Studs,Set Grid Size to 4 Studs
-Studio.App.RBXMainWindow.SetSelectionAsInstanceDefault,,Set the selection as the default for future created instances,Set the selection as the default for future created instances
 Studio.App.RBXMainWindow.SettingsElps,,Settings...,Settings...
 Studio.App.RBXMainWindow.ShowHelpForSelectedObject,,Show help for selected object,Show help for selected object
 Studio.App.RBXMainWindow.ShowListOfShortcutCommands,,Show list of shortcut commands,Show list of shortcut commands
@@ -1969,7 +1974,6 @@ Studio.App.RBXMainWindow.UnlockAll,,Unlock All,Unlock All
 Studio.App.RBXMainWindow.UploadLogFiles,,Upload Log Files,Upload Log Files
 Studio.App.RBXMainWindow.VideoRecord,,Video Record,Video Record
 Studio.App.RBXMainWindow.ViewCommandBar,,View Command Bar,View Command Bar
-Studio.App.RBXMainWindow.ViewDrafts,,View Drafts,View Drafts
 Studio.App.RBXMainWindow.ViewFindReplaceWindow,,View Find/Replace Window,View Find/Replace Window
 Studio.App.RBXMainWindow.ViewFindResults,,View Find results,View Find results
 Studio.App.RBXMainWindow.ViewGameExplorerElps,,View Game Explorer...,View Game Explorer...
@@ -1978,6 +1982,7 @@ Studio.App.RBXMainWindow.ViewOutputWindowElps,,View Output Window...,View Output
 Studio.App.RBXMainWindow.ViewPerformanceDiagnosticsElps,,View Performance Diagnostics...,View Performance Diagnostics...
 Studio.App.RBXMainWindow.ViewPropertiesElps,,View Properties...,View Properties...
 Studio.App.RBXMainWindow.ViewRecoveredScriptsElps,,View Recovered Scripts...,View Recovered Scripts...
+Studio.App.RBXMainWindow.ViewSandbox,,View Drafts,View Drafts
 Studio.App.RBXMainWindow.ViewScriptAnalysisElps,,View Script Analysis...,View Script Analysis...
 Studio.App.RBXMainWindow.ViewScriptChangesElps,,View Script Changes...,View Script Changes...
 Studio.App.RBXMainWindow.ViewScriptPerformanceElps,,View Script Performance...,View Script Performance...
@@ -2007,6 +2012,8 @@ Studio.App.RemoteDebugger.AssetProxyRunning2,,Asset Proxy running at %1:%2,Asset
 Studio.App.RemoteDebugger.AssetProxyStopped,,Asset Proxy stopped,Asset Proxy stopped
 Studio.App.RemoteDebugger.ColumnAssetId,,Asset Id,Asset Id
 Studio.App.RemoteDebugger.ColumnPath,,Path,Path
+Studio.App.RemoteDebugger.ErrorAssetMissing,,Asset not found or not accessible to ContentProvider,Asset not found or not accessible to ContentProvider
+Studio.App.RemoteDebugger.ErrorDuplicateId,,Duplicate Asset ID,Duplicate Asset ID
 Studio.App.RemoteDebugger.InvalidIp,,Invalid IP Address. ,Invalid IP Address. 
 Studio.App.RemoteDebugger.InvalidPort,,Invalid Port. ,Invalid Port. 
 Studio.App.RemoteDebugger.IpAddress,,IP Address:,IP Address:
@@ -2438,8 +2445,8 @@ Studio.App.RobloxRibbonMainWindow.Navigate,,Navigate,Navigate
 Studio.App.RobloxRibbonMainWindow.NegatePartsForMakingHoles,,Negate parts for making holes,Negate parts for making holes
 Studio.App.RobloxRibbonMainWindow.Network,,Network,Network
 Studio.App.RobloxRibbonMainWindow.NewUpdates,,What's New,What's New
-Studio.App.RobloxRibbonMainWindow.NoCollision,,No Collision,No Collision
-Studio.App.RobloxRibbonMainWindow.NoCollisionTooltip,,Create a no collision constraint,Create a no collision constraint
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraint,,No Collision,No Collision
+Studio.App.RobloxRibbonMainWindow.NoCollisionConstraintTooltip,,Create a no collision constraint,Create a no collision constraint
 Studio.App.RobloxRibbonMainWindow.None,,None,None
 Studio.App.RobloxRibbonMainWindow.OpenSaveManageDoc,,"Click here to open, save or publish, and to see everything else you can do with the document","Click here to open, save or publish, and to see everything else you can do with the document"
 Studio.App.RobloxRibbonMainWindow.OpenTheLocalPluginsFolder,,Open the local plugins folder,Open the local plugins folder
