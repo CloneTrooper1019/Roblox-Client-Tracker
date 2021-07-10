@@ -13,6 +13,7 @@ local FFlagAssetConfigEnforceNonEmptyDescription = game:DefineFastFlag("AssetCon
 local FFlagCMSUploadFees = game:GetFastFlag("CMSUploadFees")
 local FFlagAssetConfigNonCatalogOptionalDescription = game:GetFastFlag("AssetConfigNonCatalogOptionalDescription")
 local FFlagRefactorDevFrameworkContextItems = game:GetFastFlag("RefactorDevFrameworkContextItems")
+local FFlagToolboxReplaceUILibraryComponentsPt2 = game:GetFastFlag("ToolboxReplaceUILibraryComponentsPt2")
 
 local StudioService = game:GetService("StudioService")
 
@@ -771,6 +772,12 @@ function AssetConfig:render()
 				local canSave = checkCanSave(changeTable, name, description, price, minPrice, maxPrice,
 					newAssetStatus, currentTab, screenFlowType, assetTypeEnum) and not isLoading
 
+				local packagePermissionsWidth
+				if FFlagToolboxReplaceUILibraryComponentsPt2 then
+					packagePermissionsWidth = -PREVIEW_WIDTH - Constants.SCROLLBAR_PADDING
+				else
+					packagePermissionsWidth = -PREVIEW_WIDTH
+				end
 				return Roact.createElement("Frame", {
 					Size = Size,
 
@@ -920,7 +927,7 @@ function AssetConfig:render()
 						}),
 
 						PackagePermissions = ConfigTypes:isPermissions(currentTab) and Roact.createElement(Permissions, {
-							Size = UDim2.new(1, -PREVIEW_WIDTH, 1, 0),
+							Size = UDim2.new(1, packagePermissionsWidth, 1, 0),
 
 							Owner = owner,
 							AssetId = assetId,

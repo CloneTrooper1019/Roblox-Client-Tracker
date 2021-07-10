@@ -4,6 +4,7 @@ local FFlagStudioEnableBadgesInMonetizationPage = game:GetFastFlag("StudioEnable
 local FFlagGameSettingsUseKeyProvider = game:GetFastFlag("GameSettingsUseKeyProvider")
 local FFlagLuobuDevPublishLua = game:GetFastFlag("LuobuDevPublishLua")
 local FFlagLuobuDevPublishLuaTempOptIn = game:GetFastFlag("LuobuDevPublishLuaTempOptIn")
+local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
 
 local KeyProvider = {}
 
@@ -63,6 +64,12 @@ function KeyProvider.getSelectedKeyName()
     assert(FFlagLuobuDevPublishLua)
 
     return "selected"
+end
+
+function KeyProvider.getVoiceChatEnabledKeyName()
+    assert(FFlagGameSettingsEnableVoiceChat)
+
+    return "VoiceChatEnabled"
 end
 
 return KeyProvider
