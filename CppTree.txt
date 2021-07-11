@@ -8696,7 +8696,6 @@ std::_Func_base<bool,class RBX::AssetImport::Node * ptr64>
 std::_Func_base<bool,class RBX::Instance * ptr64,bool & ptr64>
 std::_Func_base<bool,class RBX::Instance * ptr64,class std::vector<class std::string,class std::allocator<class std::string > > const & ptr64,bool & ptr64>
 std::_Func_base<bool,class RBX::Instance * ptr64>
-std::_Func_base<bool,class RBX::Primitive * ptr64>
 std::_Func_base<bool,class RBX::Reflection::PropertyDescriptor const & ptr64>
 std::_Func_base<bool,class RBX::StringView>
 std::_Func_base<bool,class std::shared_ptr<class RBX::HttpResponse> >
@@ -9093,6 +9092,7 @@ std::_Iostream_error_category
 std::_LaunchPad<class std::unique_ptr<class std::tuple<class RBX::LSP::LSPManager::ServerDispatchThread>,struct std::default_delete<class std::tuple<class RBX::LSP::LSPManager::ServerDispatchThread> > > >
 std::_LaunchPad<class std::unique_ptr<class std::tuple<void (cdecl RBX::HttpPoolImpl::*)(void) ptr64,class std::shared_ptr<class RBX::HttpPoolImpl> >,struct std::default_delete<class std::tuple<void (cdecl RBX::HttpPoolImpl::*)(void) ptr64,class std::shared_ptr<class RBX::HttpPoolImpl> > > > >
 std::_LaunchPad<class std::unique_ptr<class std::tuple<void (cdecl SandboxLocalCache::*)(void) ptr64,class SandboxLocalCache * ptr64>,struct std::default_delete<class std::tuple<void (cdecl SandboxLocalCache::*)(void) ptr64,class SandboxLocalCache * ptr64> > > >
+std::_LaunchPad<class std::unique_ptr<class std::tuple<void (cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > & ptr64,class PBRSynth::Image<struct PBRSynth::Vec<unsigned char,4> > const & ptr64,enum RBX::SurfaceAppearance::TexturePackComponent,bool),class std::reference_wrapper<class std::basic_stringstream<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::reference_wrapper<class PBRSynth::Image<struct PBRSynth::Vec<unsigned char,4> > >,enum RBX::SurfaceAppearance::TexturePackComponent,bool>,struct std::default_delete<class std::tuple<void (cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > & ptr64,class PBRSynth::Image<struct PBRSynth::Vec<unsigned char,4> > const & ptr64,enum RBX::SurfaceAppearance::TexturePackComponent,bool),class std::reference_wrapper<class std::basic_stringstream<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::reference_wrapper<class PBRSynth::Image<struct PBRSynth::Vec<unsigned char,4> > >,enum RBX::SurfaceAppearance::TexturePackComponent,bool> > > >
 std::_Node_assert
 std::_Node_back
 std::_Node_base
@@ -9449,6 +9449,7 @@ std::_Ref_count_obj<class RBX::Tracing::HttpTracingHelper>
 std::_Ref_count_obj<class RBX::Tracing::LightstepReporter>
 std::_Ref_count_obj<class RBX::Tracing::Span>
 std::_Ref_count_obj<class RBX::Typesetter>
+std::_Ref_count_obj<class RBX::UploadComponentsToCloudJob>
 std::_Ref_count_obj<class RBX::UserCertManager>
 std::_Ref_count_obj<class RBX::UsernameHandler>
 std::_Ref_count_obj<class RBX::UserStorage>
