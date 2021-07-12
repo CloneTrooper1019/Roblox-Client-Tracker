@@ -13,6 +13,8 @@
 		Stylizer Stylizer: A Stylizer ContextItem, which is provided via mapToProps.
 		string Text: The text to display after the check button.
 ]]
+local FFlagDevFrameworkPaneOnClick = game:GetFastFlag("DevFrameworkPaneOnClick")
+
 local Framework = script.Parent.Parent
 local Roact = require(Framework.Parent.Roact)
 local ContextServices = require(Framework.ContextServices)
@@ -26,6 +28,9 @@ local THEME_REFACTOR = Util.RefactorFlags.THEME_REFACTOR
 local StyleModifier = Util.StyleModifier
 local Symbol = Util.Symbol
 local Typecheck = Util.Typecheck
+
+local Dash = require(Framework.packages.Dash)
+local join = Dash.join
 
 local Checkbox = Roact.PureComponent:extend("Checkbox")
 Typecheck.wrap(Checkbox, script)
@@ -55,6 +60,7 @@ function Checkbox:render()
 	local isChecked = props.Checked
 	local isDisabled = props.Disabled
 	local layoutOrder = props.LayoutOrder
+	local text = props.Text or ""
 
 	local style
 	if THEME_REFACTOR then
@@ -73,44 +79,65 @@ function Checkbox:render()
 		styleModifier = StyleModifier.Selected
 	end
 
+	local buttonProps = {
+		OnClick = self.onClick,
+		Size = style.ImageSize,
+		Style = style.BackgroundStyle,
+		StyleModifier = styleModifier,
+	}
+
 	local children = props[Roact.Children] or {}
 
-	local text = props.Text or ""
 	if text == "" then
-		return Roact.createElement(Button, {
+		return Roact.createElement(Button, join(buttonProps, {
 			LayoutOrder = layoutOrder,
-			OnClick = self.onClick,
-			Size = style.ImageSize,
-			Style = style.BackgroundStyle,
-			StyleModifier = styleModifier,
-		})
+		}), children)
 	else
-		children.Container = Roact.createElement(Pane, {
-			Layout = Enum.FillDirection.Horizontal,
-			Spacing = style.Spacing,
-		}, {
-			Button = Roact.createElement(Button, {
+		if FFlagDevFrameworkPaneOnClick then
+			children.Button = Roact.createElement(Button, join(buttonProps, {
 				LayoutOrder = 1,
-				OnClick = self.onClick,
-				Size = style.ImageSize,
-				Style = style.BackgroundStyle,
-				StyleModifier = styleModifier,
-			}),
-			Label = Roact.createElement(TextLabel, {
+			}))
+			children.Label = Roact.createElement(TextLabel, {
 				AutomaticSize = Enum.AutomaticSize.XY,
 				LayoutOrder = 2,
 				StyleModifier = styleModifier,
 				Text = text,
 			})
-		})
+			return Roact.createElement(Pane, {
+				AutomaticSize = Enum.AutomaticSize.XY,
+				Layout = Enum.FillDirection.Horizontal,
+				LayoutOrder = layoutOrder,
+				OnClick = self.onClick,
+				Spacing = style.Spacing,
+			}, children)
+		else
+			children.Container = Roact.createElement(Pane, {
+				Layout = Enum.FillDirection.Horizontal,
+				Spacing = style.Spacing,
+			}, {
+				Button = Roact.createElement(Button, {
+					LayoutOrder = 1,
+					OnClick = self.onClick,
+					Size = style.ImageSize,
+					Style = style.BackgroundStyle,
+					StyleModifier = styleModifier,
+				}),
+				Label = Roact.createElement(TextLabel, {
+					AutomaticSize = Enum.AutomaticSize.XY,
+					LayoutOrder = 2,
+					StyleModifier = styleModifier,
+					Text = text,
+				})
+			})
 
-		return Roact.createElement("TextButton", {
-			AutomaticSize = Enum.AutomaticSize.XY,
-			BackgroundTransparency = 1,
-			LayoutOrder = layoutOrder,
-			Text = "",
-			[Roact.Event.Activated] = self.onClick,
-		}, children)
+			return Roact.createElement("TextButton", {
+				AutomaticSize = Enum.AutomaticSize.XY,
+				BackgroundTransparency = 1,
+				LayoutOrder = layoutOrder,
+				Text = "",
+				[Roact.Event.Activated] = self.onClick,
+			}, children)
+		end
 	end
 end
 
