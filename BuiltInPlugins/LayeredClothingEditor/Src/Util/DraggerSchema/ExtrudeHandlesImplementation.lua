@@ -25,6 +25,14 @@ function ExtrudeHandlesImplementation:shouldKeepAspectRatio(selection, selection
 	return self._draggerContext:isCtrlKeyDown()
 end
 
+function ExtrudeHandlesImplementation:axesToScale(selectionInfo, normalId)
+	if self._draggerContext:isCtrlKeyDown() then
+		return {X = true, Y = true, Z = true}
+	end
+	local axes = {{X = true}, {Y = true}, {Z = true}}
+	return axes[normalId]
+end
+
 function ExtrudeHandlesImplementation:getMinimumSize(selection, selectionInfo, normalId)
 	return Vector3.new(0, 0, 0)
 end
@@ -39,6 +47,11 @@ function ExtrudeHandlesImplementation:beginScale(selection, initialSelectionInfo
 	self._draggerContext.addWaypoint()
 end
 
+function ExtrudeHandlesImplementation:getMinMaxSizes(selectionInfo, axesToScale, bounds)
+	local minimumAllowableSize = Vector3.new(0, 0, 0)
+	local maximumAllowableSize = Vector3.new(1, 1, 1) * math.huge
+	return minimumAllowableSize, maximumAllowableSize
+end
 -- Scale / Offset the selection by some local offset relative to the
 -- initialSelectionInfo's basisCFrame. Also takes the new size of the bounding
 -- box for convinience, though you may not need this.
