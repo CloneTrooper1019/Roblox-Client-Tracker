@@ -33,8 +33,8 @@ local KeyProvider = FFlagGameSettingsUseKeyProvider and require(Plugin.Src.Util.
 
 local FFlagGameSettingsEnableVoiceChat = game:GetFastFlag("GameSettingsEnableVoiceChat")
 
-local GetVoiceChatEnabledKeyName = FFlagGameSettingsUseKeyProvider and FFlagGameSettingsEnableVoiceChat and KeyProvider.getVoiceChatEnabledKeyName or nil
-local voiceChatEnabledKey = FFlagGameSettingsUseKeyProvider and FFlagGameSettingsEnableVoiceChat and GetVoiceChatEnabledKeyName and GetVoiceChatEnabledKeyName() or "VoiceChatEnabled"
+local GetVoiceChatEnabledKeyName = FFlagGameSettingsUseKeyProvider and KeyProvider.getVoiceChatEnabledKeyName or nil
+local voiceChatEnabledKey = FFlagGameSettingsUseKeyProvider and GetVoiceChatEnabledKeyName and GetVoiceChatEnabledKeyName() or "VoiceChatEnabled"
 
 local LOCALIZATION_ID = script.Name
 
