@@ -1,4 +1,5 @@
 local FFlagDevFrameworkCheckbox = game:GetFastFlag("DevFrameworkCheckbox")
+local FFlagDevFrameworkPaneOnClick = game:GetFastFlag("DevFrameworkPaneOnClick")
 
 if not FFlagDevFrameworkCheckbox then
 	return function() end
@@ -63,6 +64,7 @@ else
 			Roact.unmount(instance)
 		end)
 
+
 		it("should render the correct text", function()
 			local container = Instance.new("Folder")
 			local myText = "My Text"
@@ -73,11 +75,16 @@ else
 			local instance = Roact.mount(element, container)
 
 			local frame = container:FindFirstChildOfClass("TextButton")
-			expect(frame.Container).to.be.ok()
-			expect(frame.Container.Button).to.be.ok()
-			expect(frame.Container.Label).to.be.ok()
-			expect(frame.Container.Label.Text).to.equal(myText)
-
+			if FFlagDevFrameworkPaneOnClick then
+				expect(frame.Button).to.be.ok()
+				expect(frame.Label).to.be.ok()
+				expect(frame.Label.Text).to.equal(myText)
+			else
+				expect(frame.Container).to.be.ok()
+				expect(frame.Container.Button).to.be.ok()
+				expect(frame.Container.Label).to.be.ok()
+				expect(frame.Container.Label.Text).to.equal(myText)
+			end
 			Roact.unmount(instance)
 		end)
 	end
